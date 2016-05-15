@@ -5,19 +5,19 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: mysql
-  database: db/tarea2
-  username: root 
-  password: root
+  adapter: sqlite3
+  #database: db/tarea2
+  #username: root 
+  #password: root
   pool: 5
   timeout: 5000 
 
 development:
   <<: *default
-  adapter: mysql
-  database: db/development
-  username: root 
-  password: root
+  #adapter: mysql
+  database: db/development.sqlite3
+  #username: root 
+  #password: root
   pool: 5
   timeout: 5000 
 
@@ -26,18 +26,18 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  adapter: mysql
-  database: db/test
-  username: root 
-  password: root
+  #adapter: mysql
+  database: db/test.sqlite3
+  #username: root 
+  #password: root
   pool: 5
   timeout: 5000 
 
 production:
   <<: *default
-  adapter: mysql
-  database: db/production
-  username: root 
-  password: root
+  #adapter: mysql
+  database: db/production.sqlite3
+  #username: root 
+  #password: root
   pool: 5
   timeout: 5000 

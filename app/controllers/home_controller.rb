@@ -58,7 +58,7 @@ class HomeController < ApplicationController
   
   
   def arreglo(tag, access_token)
-    respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag+'/media/recent?access_token='+access_token
+    respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag.to_s+'/media/recent?access_token='+access_token
     
     response = JSON.parse(respuesta)
     arreglo = Array.new

@@ -111,6 +111,7 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_param (0.9.0)
     railties (4.2.6)
       actionpack (= 4.2.6)
       activesupport (= 4.2.6)
@@ -119,6 +120,8 @@ GEM
     rake (11.1.2)
     rdoc (4.2.2)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sass (3.4.22)
     sass-rails (5.0.4)
       railties (>= 4.0.0, < 5.0)
@@ -167,6 +170,9 @@ DEPENDENCIES
   jquery-rails
   mysql
   rails (= 4.2.6)
+  rails_param
+  rake
+  rest-client
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sinatra

@@ -24,7 +24,7 @@ class HomeController < ApplicationController
     render json:{
       metadata:{total: total},
       posts: arreglo,
-      version: '1.0.3'
+      version: '1.0.4'
       
     }
   end

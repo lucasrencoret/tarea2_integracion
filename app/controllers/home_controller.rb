@@ -24,7 +24,7 @@ class HomeController < ApplicationController
     render json:{
       metadata:{total: total},
       posts: arreglo,
-      version: '1.0.4'
+      version: '1.0.5'
       
     }
   end
@@ -58,10 +58,10 @@ class HomeController < ApplicationController
   
   
   def arreglo(tag, access_token)
-    respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag+'/media/recent?access_token='+access_token
+    respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag.to_s+'/media/recent?access_token='+access_token
     
     response = JSON.parse(respuesta)
-    arreglo = []
+    arreglo = Array.new
    
     response['data'].each  do |post|
       

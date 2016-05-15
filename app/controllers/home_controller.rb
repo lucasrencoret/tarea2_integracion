@@ -61,7 +61,7 @@ class HomeController < ApplicationController
     respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag+'/media/recent?access_token='+access_token
     
     response = JSON.parse(respuesta)
-    arreglo = []
+    arreglo = Array.new
    
     response['data'].each  do |post|
       

@@ -2,7 +2,8 @@ language: ruby
 rvm:
  - 2.3.0
  
-
+after_success:
+  - coveralls
  
 # uncomment and edit the following line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec

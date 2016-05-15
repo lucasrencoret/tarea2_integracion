@@ -81,7 +81,8 @@ class HomeController < ApplicationController
   end
   
   def contar(tag, access_token)
-    response = RestClient.get 'https://api.instagram.com/v1/tags/'+tag+'?access_token='+access_token
+    respuesta = RestClient.get 'https://api.instagram.com/v1/tags/'+tag+'?access_token='+access_token
+    response = JSON.parse(respuesta)
 	  cantidad = response['data']['media_count'].to_i
     return cantidad
   end
